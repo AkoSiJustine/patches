@@ -1,0 +1,241 @@
+/* General styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #111; 
+    color: #ffce00;
+  }
+  
+  /* Header styles */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px;
+    background-color: #000;
+    position: fixed;
+    width: 95%;
+    
+  }
+  
+  .logo img {
+    width: 120px;
+  }
+  /* Navigation styles */
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+  
+  nav a {
+    color: #ffce00;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 2px solid transparent;  /* Default no border */
+    border-radius: 5px;             /* For smooth rounded corners */
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  nav a:hover {
+    background-color: #ffce00;      /* Highlight color on hover */
+    color: #000;                    /* Text color change on hover */
+    border-color: #ffce00;          /* Border matches the background */
+  }
+  
+  
+  /* Hero section */
+  .hero {
+    display: flex;
+    background-image: url('assets/background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 200px 40px;
+    height: 100%;
+    
+  }
+  
+  .hero-content {
+    max-width: 50%;
+  }
+  
+  .hero h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #ffce00;
+  }
+  
+  
+  .hero-circles {
+    position: relative;
+    width: 50%;
+  }
+  
+  .circle-large {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 160px;
+  }
+  
+  .circle-large img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* General layout for the "About Me" section */
+  .about-me-container {
+    display: flex;
+    width: 100%;
+    background-color: #f4f4f4;
+  }
+  
+  .image-section {
+    flex: 1;
+    background-color: #ffce00;
+  }
+  
+  .image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .text-section {
+    flex: 1;
+    padding: 40px;
+    background-image: url('assets/background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    display: flex;
+  }
+  
+  .text-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+   
+    
+  }
+  
+  .text-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #ffce00;
+  }
+  
+  .text-section p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  /* Projects section */
+  .projects-section {
+    padding: 150px 40px;
+    background-image: url('assets/background.jpg'); /* Ensure the background image path is correct */
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  
+  .projects-section h2 {
+    color: #ffce00;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns grid layout */
+    gap: 20px; /* Space between the project cards */
+  }
+  
+  .project-card {
+    background-color: #222; /* Dark background color */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Ensures even spacing inside the card */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .project-card:hover {
+    transform: scale(1.05); /* Slightly enlarges the card on hover */
+  }
+  
+  .card-image img {
+    max-width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .project-card p {
+    color: #ffce00; /* Yellow color for the project title */
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  
+  .contact {
+    padding: 50px 200px;
+    background-image: url('assets/background.jpg');
+    background-size: cover;
+   background-attachment: fixed;
+  
+  
+  }
+  
+  .contact h2 {
+    font-size: 32px;
+    color: #ffce00;
+    margin-bottom: 30px;
+  
+  }
+  
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    background-color:  #ffce00;
+    padding: 15px;
+    border-radius: 8px;
+    
+  }
+  
+  .contact-item img {
+    width: 30px;
+    height: auto;
+    margin-right: 15px;
+  }
+  
+  .contact-item span {
+    font-size: 18px;
+    color: black;
+  }
+  
+  @media (max-width: 768px) {
+    .hero {
+      flex-direction: column;
+    }
+  
+    .contact-info {
+      gap: 10px;
+    }
+  }
